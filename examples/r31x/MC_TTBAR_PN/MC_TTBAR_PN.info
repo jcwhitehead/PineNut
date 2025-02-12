@@ -1,0 +1,12 @@
+Name: MC_TTBAR_PN
+Summary: MC analysis for ttbar production, using PineNut.
+Status: VALIDATED
+Reentrant: true
+Authors:
+ - James Whitehead
+ - Petr Baron
+RunInfo:
+ "pp -> tt"
+NumEvents: 10000
+Description:
+  This is a simple Monte Carlo analysis for $t\bar{t}$ production.
