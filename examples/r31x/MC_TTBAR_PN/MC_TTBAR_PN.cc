@@ -41,7 +41,9 @@ namespace Rivet {
       PineNut::init({
 	  2, 0, 0, 0,
 	  3, 0, 0, 0,
-	}, "CT18NLO",
+	  3, 0, 1, 0,
+	  3, 0, 0, 1,
+	}, "NNPDF40MC_nlo_as_01180",
 	this);
       
       FinalState fs;
@@ -207,7 +209,8 @@ namespace Rivet {
     void finalize() {
       const double sf = crossSection() / sumOfWeights();
 
-      for (auto hist : bins) { PineNut::scale(hist.first, sf); };
+      PineNut::scale(sf);
+
       PineNut::scale("t_absrap", 0.5);
       PineNut::scale("t_pt", 0.5);
       PineNut::scale("t_pt_vs_t_absrap", 0.5);
